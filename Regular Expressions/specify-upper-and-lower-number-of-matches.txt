@@ -1,0 +1,6 @@
+let ohStr = "Ohhh no";
+let ohRegex = /^oh{3,6} no/gi; // Change this line
+let result = ohRegex.test(ohStr);
+let result2 = ohStr.match(ohRegex)
+console.log(result2)
+console.log(result)
