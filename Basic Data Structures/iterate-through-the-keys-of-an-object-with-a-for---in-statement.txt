@@ -1,0 +1,25 @@
+function countOnline(usersObj) {
+  // Only change code below this line
+  let absen = 0
+  for(let name in usersObj){
+    if(usersObj[name]["online"] === true){
+      absen++
+    }
+  }
+
+  return absen
+  // Only change code above this line
+}
+
+console.log(countOnline({
+  Alan: {
+    online: false
+  },
+  Jeff: {
+    online: true
+  },
+  Sarah: {
+    online: false
+  }
+}
+))

@@ -1,0 +1,9 @@
+function quickCheck(arr, elem) {
+  // Only change code below this line
+  let check = arr.indexOf(elem) === -1 ? false : true
+
+  return check
+  // Only change code above this line
+}
+
+console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
