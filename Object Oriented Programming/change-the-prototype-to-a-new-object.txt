@@ -1,0 +1,14 @@
+function Dog(name) {
+  this.name = name;
+}
+
+Dog.prototype = {
+  numLegs : 4,
+  eat : function eat(){
+    console.log("Eat")
+  },
+  describe : function describe(){
+    console.log("Describe")
+  }
+
+};

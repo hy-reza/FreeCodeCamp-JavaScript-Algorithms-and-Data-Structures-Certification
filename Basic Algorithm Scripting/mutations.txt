@@ -1,0 +1,16 @@
+function mutation(arr) {
+
+  const [string, matchStr] = arr
+  const result = []
+
+
+  for(let i = 0; i < matchStr.length; i++){
+   let rgx = new RegExp("["+matchStr[i]+"]", "i")
+   let testResult = rgx.test(string)
+   result.push(testResult)
+  }
+
+  return result.indexOf(false) === -1 ? true : false
+}
+
+console.log(mutation(["hello", "hey"]))

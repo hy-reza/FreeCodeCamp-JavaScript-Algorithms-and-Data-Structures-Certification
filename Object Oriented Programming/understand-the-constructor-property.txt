@@ -1,0 +1,18 @@
+function Dog(name) {
+  this.name = name;
+}
+
+let puff = new Dog("Puff")
+console.log(puff)
+
+// Only change code below this line
+function joinDogFraternity(candidate) {
+  if(candidate.constructor === Dog){
+    return true
+  }else{
+    return false
+  }
+}
+
+let fort = joinDogFraternity(puff)
+console.log(fort)

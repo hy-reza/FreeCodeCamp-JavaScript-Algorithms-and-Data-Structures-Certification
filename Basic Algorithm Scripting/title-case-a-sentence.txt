@@ -1,0 +1,15 @@
+// function titleCase(str) {
+
+//   const newArr = str.split(' ')
+//   let newStr = []
+//   for(let i = 0; i < newArr.length; i++){
+//     newStr.push(newArr[i][0].toUpperCase() + newArr[i].substring(1).toLowerCase())  
+//   } 
+
+//   return newStr.join(' ')
+// }
+
+
+const titleCase = (str) => str.split(' ').map(name => name[0].toUpperCase() + name.substring(1).toLowerCase()).join(' ')
+
+console.log(titleCase("I'm a little tea pot"))
