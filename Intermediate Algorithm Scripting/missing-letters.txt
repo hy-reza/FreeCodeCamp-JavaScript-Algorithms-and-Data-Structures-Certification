@@ -1,0 +1,18 @@
+function fearNotLetter(str) {
+  const startASCII = str.charCodeAt(0)
+  const endASCII = str.charCodeAt(str.length - 1)
+  const range =  endASCII - startASCII
+  const compare = []
+
+  for(let i = 1; i <= range ; i++){
+    compare.push(startASCII + i)
+  }
+
+  const strASCII = str.split('').map(el => el.charCodeAt())
+  const result = compare.filter(el => !strASCII.includes(el)).map(el => String.fromCharCode(el))
+  return result.length === 0 ? undefined : result.join()
+  // str.split('').map(el => el.charCodeAt()).filter(el => compare.includes(el))
+
+}
+
+console.log(fearNotLetter("abcdefghijklmnopqrstvwxyz"));

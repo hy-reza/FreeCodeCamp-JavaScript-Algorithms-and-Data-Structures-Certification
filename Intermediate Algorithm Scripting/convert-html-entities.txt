@@ -1,0 +1,52 @@
+function convertHTML(str) {
+
+  
+  // let result = str
+  // if(!/(\w)(\W)/.test(str)){
+  //   const x = str.match(/[&<>"']/)[0];
+
+  //   switch(x){
+  //   case "&" :
+  //     result = str.replace(new RegExp(x, 'g'), "&amp;")
+  //     break
+  //   case "<":
+  //     result = str.replace(new RegExp("<", 'g'), "&lt;")
+  //     break
+  //   case ">":
+  //     result = str.replace(new RegExp(">", 'g'), "&gt;")
+  //     break
+  //   case "\"" :
+  //     result =  str.replace(new RegExp(x, 'g'), "&quot;")
+  //     break
+  //   case "'" :
+  //     result =  str.replace(new RegExp(x, 'g'), "&apos;")
+  //     break
+  // }
+  // }
+  
+
+  return str.split('').map((huruf) => {
+    switch(huruf){
+      case '&' :
+        return "&amp;"
+      case "<":
+        return "&lt;"
+      case ">":
+        return"&gt;"
+      case "\"" :
+        return"&quot;"
+      case "'" :
+        return"&apos;"
+      default :
+        return huruf
+    }
+  }).join('')
+
+}
+
+console.log(convertHTML("Dolce & Gabbana"));
+
+
+console.log()
+
+

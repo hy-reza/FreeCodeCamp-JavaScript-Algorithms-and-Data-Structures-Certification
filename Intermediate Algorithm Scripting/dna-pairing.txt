@@ -1,0 +1,22 @@
+function pairElement(str) {
+  const arr = str.split('')
+  const newArr = []
+  arr.forEach(dna => {switch(dna){
+    case "A" : 
+      newArr.push(["A","T"])
+      break
+    case "T" :
+      newArr.push(["T","A"])
+      break
+    case "G" :
+      newArr.push(["G","C"])
+      break
+    case "C" :
+      newArr.push(["C","G"])
+      break
+  }})
+
+  return newArr
+}
+
+console.log(pairElement("ATCGA"));

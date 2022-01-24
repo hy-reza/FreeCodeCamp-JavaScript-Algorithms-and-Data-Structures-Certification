@@ -1,0 +1,18 @@
+function translatePigLatin(str) {
+  
+  let trueStr = /^[aiueo]/gi.test(str)
+  let falseStr = /[aiueo]/gi.test(str)
+  let newStr = ""
+  if(trueStr){
+    newStr = str + "way"
+  }else if(!falseStr){
+    newStr = str + "ay"
+  }else{
+    newStr = str.replace(/(^[^aiueo]+)([aiueo].*)/g,"$2$1ay" )
+  }
+    
+  
+  return newStr
+}
+
+console.log(translatePigLatin("rhythm"));

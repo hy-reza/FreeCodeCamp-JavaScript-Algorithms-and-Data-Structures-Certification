@@ -1,0 +1,21 @@
+function sumAll(arr) {
+
+  const [startNum, endNum] = arr
+  const newArr = []
+
+  if(endNum > startNum){
+    for(let i = startNum; i<=endNum; i++){
+     newArr.push(i)
+    }
+  }else{
+    for(let i = startNum; i >= endNum; i--){
+    newArr.push(i)
+    }
+  }
+
+  const result = newArr.reduce((acc, num) => acc + num, 0)
+
+  return result;
+}
+
+console.log(sumAll([4, 1]))
