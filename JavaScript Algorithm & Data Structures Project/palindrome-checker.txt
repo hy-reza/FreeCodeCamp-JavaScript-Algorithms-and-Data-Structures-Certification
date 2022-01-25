@@ -1,0 +1,10 @@
+function palindrome(str) {
+  
+  const string = str.split('').filter(e => /[\a-zA-Z\d]/.test(e)).join('').toLowerCase()
+  const arrStr = []
+  string.split('').forEach(e => arrStr.unshift(e))
+  const reverseStr = arrStr.join('')
+  return string === reverseStr
+}
+
+console.log(palindrome("A man, a plan, a canal. Panama"));

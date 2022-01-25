@@ -1,0 +1,76 @@
+function rot13(str) {
+  return str.split('').map(function(w){
+    switch(w){
+      case 'A' :
+        return "N"
+      case 'B' :
+        return "O"
+      case 'C' :
+        return "P"
+      case 'D' :
+        return "Q"
+      case 'E' :
+        return "R"
+      case 'F' :
+        return "S"
+      case 'G' :
+        return "T"
+      case 'H' :
+        return "U"
+      case 'I' :
+        return "V"
+      case 'J' :
+        return "W"
+      case 'K' :
+        return "X"
+      case 'L' :
+        return "Y"
+      case 'M' :
+        return "Z"
+      case 'N' :
+        return "A"
+      case 'O' :
+        return "B"
+      case 'P' :
+        return "C"
+      case 'Q' :
+        return "D"
+      case 'R' :
+        return "E"
+      case 'S' :
+        return "F"
+      case 'T' :
+        return "G"
+      case 'U' :
+        return "H"
+      case 'V' :
+        return "I"
+      case 'W' :
+        return "J"
+      case 'X' :
+        return "K"
+      case 'Y' :
+        return "L"
+      case 'Z' :
+        return "M"
+      default :
+        return w
+    } 
+
+  }).join('');
+}
+
+console.log(rot13("ASERR PBQR PNZC"));
+
+
+
+
+
+// const obj = {"S" : "X", "P" : "Z"}
+
+// const string = "SERR PBQR PNZC"
+
+// const funct = () => "S" ==  Object.keys(obj)[0] ? obj["S"] : "S"
+
+
+// console.log(string.replace("S", funct))
